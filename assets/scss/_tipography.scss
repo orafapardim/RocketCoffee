@@ -1,0 +1,19 @@
+html {
+  font: normal 16px 'Manrope', sans-serif;
+}
+
+.title, .title--outline {
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: -.3rem
+}
+
+.title--outline {
+  color: $black;
+  text-shadow: -.0625rem -.0625rem 0 $purple, .0625rem -.0625rem 0 $purple, -.0625rem .0625rem 0 $purple, .0625rem .0625rem 0 $purple;
+}
+
+.text {
+  font-size: 1.875rem;
+  font-weight: 600;
+}

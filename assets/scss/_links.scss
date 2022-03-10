@@ -1,0 +1,27 @@
+.link {
+  font-size: .875rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  &--arrow {
+    padding-right: 1rem;
+    position: relative;
+
+    &::before {
+      content: url(../img/icons/arrow.svg);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--white {
+    color: $white;
+
+    &:hover {
+      color: $purple;
+      transition: .5s;
+    }
+  }
+}

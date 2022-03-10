@@ -1,0 +1,45 @@
+.header {
+  background: $black url(../img/logo-mobile.svg) no-repeat 1.5rem center / auto border-box;
+  border-bottom: 1px solid $light-gray;
+  height: 10vh;
+  margin: 0 auto;
+  position: relative;
+
+  & .logo, .btn--primary {
+    display: none;
+  }
+}
+
+@include for-desktop-only {
+  .header {
+    background: transparent;
+    border: none;
+    position: relative;
+
+    & .logo {
+      display: block;
+      left: 18%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    & .btn--burger {
+      display: none;
+    }
+
+    & .btn--primary {
+      display: block;
+      position: absolute;
+      right: 2%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@include for-ultrawaid-only {
+  .header {
+    max-width: 90%;
+  }
+}

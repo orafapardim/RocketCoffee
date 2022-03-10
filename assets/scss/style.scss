@@ -1,0 +1,56 @@
+@import 'base', 'tipography', 'buttons', 'links', 'navbar', 'header';
+
+.main {
+  @include flx(center, column, space-between);
+  height: 90vh;
+  margin: 0 auto;
+  width: 100%;
+
+  &__description--desktop {
+    display: none;
+  }
+
+  &__description--mobile {
+    @include flx(center, column, center);
+    flex: 1;
+
+    & .text {
+      text-align: center;
+      width: 80%;
+    }
+  }
+
+  & .btn--primary {
+    display: block;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+}
+
+@include for-desktop-only {
+  .main {
+    width: 80%;
+
+    &__description--desktop {
+      @include flx(center, column, center);
+      flex: 1;
+      width: 100%;
+    }
+
+    &__description--mobile {
+      display: none;
+    }
+
+    & .btn--primary {
+      display: none;
+    }
+  }
+}
+
+@include for-ultrawaid-only {
+  .main {
+    max-width: 90%;
+  }
+}

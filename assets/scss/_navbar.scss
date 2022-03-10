@@ -1,0 +1,72 @@
+.nav--collapse {
+  @include flx(center, row, flex-end);
+  height: 100%;
+  position: relative;
+
+  @include for-desktop-only {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & button {
+    background: url(../img/icons/menu-burguer-open.svg) no-repeat center / auto border-box;
+    border: none;
+    display: block;
+    height: 3rem;
+    position: absolute;
+    right: 1.5rem;
+    width: 3rem;
+
+    &.active {
+      background: url(../img/icons/menu-burguer-close.svg) no-repeat center / auto border-box;
+    }
+
+    @include for-desktop-only {
+      display: none;
+    }
+  }
+
+  & ul.nav--menu {
+    display: none;
+
+    @include for-desktop-only {
+      @include flx(center, row, center);
+      gap: 2rem;
+    }
+  }
+
+  & ul.nav--menu.active {
+    @include flx(flex-start, column, flex-start);
+    background: $black;
+    position: absolute;
+    top: 100%;
+    height: 100vh;
+    width: 100%;
+
+    & li {
+      @include flx(center, row, flex-start);
+      border-bottom: .0625rem solid $light-gray;
+      border-top: .0625rem solid $light-gray;
+      height: 3.5rem;
+      padding-left: 1rem;
+      width: 100%;
+
+      & a {
+        color: $light-gray;
+        font-size: 1.125rem;
+        font-weight: 400;
+      }
+
+      &.link--active {
+        border-left: .3125rem solid $purple;
+
+        & a {
+          color: $white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
