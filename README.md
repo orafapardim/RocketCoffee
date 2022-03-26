@@ -1,5 +1,5 @@
 # Rocket Coffee
-> Proposta de desenvolvimento de homepage para a marca de café da @rocketseat ! A idealização e o layout da Rocket Coffee foi lançado na plataforma da Rocket, no painel de Desafios!
+> Desafio da @rocketseat para iniciantes em front-end: Desenvolvimento do layout da homepage para a Rocket Coffee.
 
 <img src="https://user-images.githubusercontent.com/83538547/157716790-d0fb6f26-a81d-4bf2-acf3-1fbfc89f57a1.png" width="100%">
 
